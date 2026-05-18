@@ -1,0 +1,487 @@
+{
+  "openai": [
+    {
+      "title": "Building a safe, effective sandbox to enable Codex on Windows",
+      "link": "https://openai.com/index/building-codex-windows-sandbox",
+      "summary": "了解 OpenAI 如何为 Windows 版 Codex 构建安全沙箱，通过受控的文件访问和网络限制实现安全高效的编码 Agent。",
+      "date": "2026-05-13T11:00:00",
+      "category": "Engineering"
+    },
+    {
+      "title": "Unlocking large scale AI training networks with MRC (Multipath Reliable Connection)",
+      "link": "https://openai.com/index/mrc-supercomputer-networking",
+      "summary": "OpenAI 发布 MRC（多路径可靠连接），一种通过 OCP 开源的新型超级计算网络协议，可提升大规模 AI 训练集群的韧性和性能。",
+      "date": "2026-05-05T10:00:00",
+      "category": "Engineering"
+    },
+    {
+      "title": "How OpenAI delivers low-latency voice AI at scale",
+      "link": "https://openai.com/index/delivering-low-latency-voice-ai-at-scale",
+      "summary": "OpenAI 如何重建其 WebRTC 技术栈，以低延迟、全球规模和无缝对话轮转实现实时语音 AI。",
+      "date": "2026-05-04T00:00:00",
+      "category": "Engineering"
+    },
+    {
+      "title": "An open-source spec for orchestration: Symphony",
+      "link": "https://openai.com/index/open-source-codex-orchestration-symphony",
+      "summary": "了解 Symphony——Codex 编排的开源规范——如何将 Issue Tracker 转变为持续运行的 Agent 系统，提升工程产出并减少上下文切换。",
+      "date": "2026-04-27T00:00:00",
+      "category": "Engineering"
+    },
+    {
+      "title": "Speeding up agentic workflows with WebSockets in the Responses API",
+      "link": "https://openai.com/index/speeding-up-agentic-workflows-with-websockets",
+      "summary": "深入解析 Codex Agent 循环，展示 WebSocket 和连接级缓存如何降低 API 开销并改善模型延迟。",
+      "date": "2026-04-22T10:00:00",
+      "category": "Engineering"
+    },
+    {
+      "title": "From model to agent: Equipping the Responses API with a computer environment",
+      "link": "https://openai.com/index/equip-responses-api-computer-environment",
+      "summary": "OpenAI 如何使用 Responses API、Shell 工具和托管容器构建 Agent 运行时，运行安全、可扩展的支持文件、工具和状态的 Agent。",
+      "date": "2026-03-11T11:00:00",
+      "category": "Engineering"
+    },
+    {
+      "title": "Beyond rate limits: scaling access to Codex and Sora",
+      "link": "https://openai.com/index/beyond-rate-limits",
+      "summary": "OpenAI 如何构建实时访问系统，结合速率限制、用量追踪和积分机制，为 Sora 和 Codex 提供持续访问能力。",
+      "date": "2026-02-13T09:00:00",
+      "category": "Engineering"
+    },
+    {
+      "title": "Harness engineering: leveraging Codex in an agent-first world",
+      "link": "https://openai.com/index/harness-engineering",
+      "summary": "Ryan Lopopolo（技术团队成员）撰文。",
+      "date": "2026-02-11T09:00:00",
+      "category": "Engineering"
+    },
+    {
+      "title": "Unlocking the Codex harness: how we built the App Server",
+      "link": "https://openai.com/index/unlocking-the-codex-harness",
+      "summary": "了解如何使用 Codex App Server 嵌入 Codex Agent——一个双向 JSON-RPC API，支持流式进度、工具使用、审批和差异对比。",
+      "date": "2026-02-04T13:00:00",
+      "category": "Engineering"
+    },
+    {
+      "title": "Inside OpenAI’s in-house data agent",
+      "link": "https://openai.com/index/inside-our-in-house-data-agent",
+      "summary": "OpenAI 如何构建内部 AI 数据 Agent，利用 GPT-5、Codex 和记忆在海量数据集上进行推理，数分钟内给出可靠洞察。",
+      "date": "2026-01-29T10:00:00",
+      "category": "Engineering"
+    },
+    {
+      "title": "Unrolling the Codex agent loop",
+      "link": "https://openai.com/index/unrolling-the-codex-agent-loop",
+      "summary": "Codex Agent 循环技术深度解析：Codex CLI 如何通过 Responses API 编排模型、工具、提示和性能。",
+      "date": "2026-01-23T12:00:00",
+      "category": "Engineering"
+    },
+    {
+      "title": "Scaling PostgreSQL to power 800 million ChatGPT users",
+      "link": "https://openai.com/index/scaling-postgresql",
+      "summary": "OpenAI 如何通过副本、缓存、速率限制和负载隔离将 PostgreSQL 扩展至每秒数百万次查询的幕后故事。",
+      "date": "2026-01-22T12:00:00",
+      "category": "Engineering"
+    },
+    {
+      "title": "How We Used Codex to Ship Sora for Android in 28 Days",
+      "link": "https://openai.com/index/shipping-sora-for-android-with-codex",
+      "summary": "OpenAI 使用 Codex 在 28 天内为 Android 交付了 Sora。AI 辅助的规划、翻译和并行编码工作流帮助一支精干团队实现快速可靠的开发。",
+      "date": "2025-12-12T00:00:00",
+      "category": "Engineering"
+    },
+    {
+      "title": "How we built OWL, the new architecture behind our ChatGPT-based browser, Atlas",
+      "link": "https://openai.com/index/building-chatgpt-atlas",
+      "summary": "深入解析 OWL——驱动 ChatGPT Atlas 的新架构：解耦 Chromium，实现快速启动、丰富 UI 和 ChatGPT 的 Agent 浏览能力。",
+      "date": "2025-10-30T00:00:00",
+      "category": "Engineering"
+    }
+  ],
+  "anthropic": [
+    {
+      "title": "An update on recent Claude Code quality reports",
+      "link": "https://www.anthropic.com/engineering/april-23-postmortem",
+      "summary": "我们将近期 Claude Code 质量问题的报告追溯到三个独立的变更。本文详述了问题发生的原因以及我们正在采取的改进措施。",
+      "date": "2026-04-23T00:00:00",
+      "category": "engineering"
+    },
+    {
+      "title": "Scaling Managed Agents: Decoupling the brain from the hands",
+      "link": "https://www.anthropic.com/engineering/managed-agents",
+      "summary": "我们如何将推理与执行解耦，以规模化地管理 Agent。",
+      "date": "2026-04-08T00:00:00",
+      "category": "engineering"
+    },
+    {
+      "title": "Claude Code auto mode: a safer way to skip permissions",
+      "link": "https://www.anthropic.com/engineering/claude-code-auto-mode",
+      "summary": "推出 Claude Code 的自动模式，让你可以安全地跳过权限提示。",
+      "date": "2026-03-25T00:00:00",
+      "category": "engineering"
+    },
+    {
+      "title": "Harness design for long-running application development",
+      "link": "https://www.anthropic.com/engineering/harness-design-long-running-apps",
+      "summary": "为长时间运行的 Agent 应用构建可靠 Harness 的设计模式。",
+      "date": "2026-03-24T00:00:00",
+      "category": "engineering"
+    },
+    {
+      "title": "Eval awareness in Claude Opus 4.6's BrowseComp performance",
+      "link": "https://www.anthropic.com/engineering/eval-awareness-browsecomp",
+      "summary": "调查 Claude Opus 4.6 在 BrowseComp 性能中的评估感知现象。",
+      "date": "2026-03-06T00:00:00",
+      "category": "engineering"
+    },
+    {
+      "title": "Quantifying infrastructure noise in agentic coding evals",
+      "link": "https://www.anthropic.com/engineering/infrastructure-noise",
+      "summary": "基础设施的变异性如何影响 Agent 编码评估结果。",
+      "date": "2026-02-05T00:00:00",
+      "category": "engineering"
+    },
+    {
+      "title": "Building a C compiler with a team of parallel Claudes",
+      "link": "https://www.anthropic.com/engineering/building-c-compiler",
+      "summary": "我们如何使用多个并行工作的 Claude 实例构建了一个可用的 C 编译器。",
+      "date": "2026-02-05T00:00:00",
+      "category": "engineering"
+    },
+    {
+      "title": "Designing AI-resistant technical evaluations",
+      "link": "https://www.anthropic.com/engineering/AI-resistant-technical-evaluations",
+      "summary": "设计能够抵御 AI 数据污染的技术评估方法。",
+      "date": "2026-01-21T00:00:00",
+      "category": "engineering"
+    },
+    {
+      "title": "Demystifying evals for AI agents",
+      "link": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+      "summary": "理解和设计 AI Agent 评估的实用指南。",
+      "date": "2026-01-09T00:00:00",
+      "category": "engineering"
+    },
+    {
+      "title": "Effective harnesses for long-running agents",
+      "link": "https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents",
+      "summary": "为长时间运行的 Agent 任务构建有效 Harness 的最佳实践。",
+      "date": "2025-11-26T00:00:00",
+      "category": "engineering"
+    },
+    {
+      "title": "Introducing advanced tool use on the Claude Developer Platform",
+      "link": "https://www.anthropic.com/engineering/advanced-tool-use",
+      "summary": "Claude 开发者平台新增的高级工具使用能力。",
+      "date": "2025-11-24T00:00:00",
+      "category": "engineering"
+    },
+    {
+      "title": "Code execution with MCP: Building more efficient agents",
+      "link": "https://www.anthropic.com/engineering/code-execution-with-mcp",
+      "summary": "使用模型上下文协议（MCP）进行代码执行，构建更高效的 Agent。",
+      "date": "2025-11-04T00:00:00",
+      "category": "engineering"
+    },
+    {
+      "title": "Beyond permission prompts: making Claude Code more secure and autonomous",
+      "link": "https://www.anthropic.com/engineering/claude-code-sandboxing",
+      "summary": "我们如何通过沙箱化让 Claude Code 更安全、更自主。",
+      "date": "2025-10-20T00:00:00",
+      "category": "engineering"
+    },
+    {
+      "title": "Equipping agents for the real world with Agent Skills",
+      "link": "https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills",
+      "summary": "推出 Agent Skills，为 AI Agent 装备现实世界任务所需的能力。",
+      "date": "2025-10-16T00:00:00",
+      "category": "engineering"
+    },
+    {
+      "title": "Effective context engineering for AI agents",
+      "link": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "summary": "构建 AI Agent 时的有效上下文工程技巧。",
+      "date": "2025-09-29T00:00:00",
+      "category": "engineering"
+    },
+    {
+      "title": "A postmortem of three recent issues",
+      "link": "https://www.anthropic.com/engineering/a-postmortem-of-three-recent-issues",
+      "summary": "对近期三个工程问题的详细事后分析。",
+      "date": "2025-09-17T00:00:00",
+      "category": "engineering"
+    },
+    {
+      "title": "Writing effective tools for agents — with agents",
+      "link": "https://www.anthropic.com/engineering/writing-tools-for-agents",
+      "summary": "我们如何使用 Agent 来帮助编写更有效的 Agent 工具。",
+      "date": "2025-09-11T00:00:00",
+      "category": "engineering"
+    },
+    {
+      "title": "Desktop Extensions: One-click MCP server installation for Claude Desktop",
+      "link": "https://www.anthropic.com/engineering/desktop-extensions",
+      "summary": "推出 Desktop Extensions，实现一键安装 MCP 服务器。",
+      "date": "2025-06-26T00:00:00",
+      "category": "engineering"
+    },
+    {
+      "title": "How we built our multi-agent research system",
+      "link": "https://www.anthropic.com/engineering/multi-agent-research-system",
+      "summary": "我们多 Agent 研究系统的架构设计。",
+      "date": "2025-06-13T00:00:00",
+      "category": "engineering"
+    },
+    {
+      "title": "Claude Code: Best practices for agentic coding",
+      "link": "https://www.anthropic.com/engineering/claude-code-best-practices",
+      "summary": "在 Agent 编码工作流中使用 Claude Code 的最佳实践。",
+      "date": "2025-04-18T00:00:00",
+      "category": "engineering"
+    },
+    {
+      "title": "The \"think\" tool: Enabling Claude to stop and think in complex tool use situations",
+      "link": "https://www.anthropic.com/engineering/claude-think-tool",
+      "summary": "推出 think 工具，让 Claude 在复杂工具使用场景中暂停并推理。",
+      "date": "2025-03-20T00:00:00",
+      "category": "engineering"
+    },
+    {
+      "title": "Raising the bar on SWE-bench Verified with Claude 3.5 Sonnet",
+      "link": "https://www.anthropic.com/engineering/swe-bench-sonnet",
+      "summary": "Claude 3.5 Sonnet 如何在 SWE-bench Verified 上取得最先进的结果。",
+      "date": "2025-01-06T00:00:00",
+      "category": "engineering"
+    },
+    {
+      "title": "Building effective agents",
+      "link": "https://www.anthropic.com/engineering/building-effective-agents",
+      "summary": "构建高效 AI Agent 的综合指南。",
+      "date": "2024-12-19T00:00:00",
+      "category": "engineering"
+    },
+    {
+      "title": "Introducing Contextual Retrieval",
+      "link": "https://www.anthropic.com/engineering/contextual-retrieval",
+      "summary": "推出 Contextual Retrieval，提升 RAG 性能。",
+      "date": "2024-09-19T00:00:00",
+      "category": "engineering"
+    }
+  ],
+  "karpathy_blog": [
+    {
+      "title": "microgpt",
+      "link": "http://karpathy.github.io/2026/02/12/microgpt/",
+      "summary": "我的新艺术项目 microgpt 简要指南——一个仅 200 行纯 Python 代码、零依赖的文件，可以训练和推理 GPT。它包含了完整的算法核心：文档数据集、分词器、自动求导引擎、类 GPT-2 神经网络架构、Adam 优化器、训练循环和推理循环。这是我多个项目（micrograd、makemore、nanogpt 等）的集大成之作。",
+      "date": "2026-02-12T07:00:00+00:00",
+      "category": "blog"
+    },
+    {
+      "title": "Deep Neural Nets: 33 years ago and 33 years from now",
+      "link": "http://karpathy.github.io/2022/03/14/lecun1989/",
+      "summary": "Yann LeCun 等人 1989 年的论文《反向传播应用于手写邮政编码识别》具有重要的历史意义——据我所知，这是最早使用反向传播端到端训练的神经网络的实际应用。除了数据集很小（7291 个样本）之外，这篇论文读起来出奇地现代。",
+      "date": "2022-03-14T07:00:00+00:00",
+      "category": "blog"
+    },
+    {
+      "title": "A from-scratch tour of Bitcoin in Python",
+      "link": "http://karpathy.github.io/2021/06/21/blockchain/",
+      "summary": "我觉得区块链很迷人，因为它将开源软件开发扩展为开源+状态。这似乎是计算范式上的一次真正的创新：我们不仅能共享代码，还能共享一台运行中的计算机，任何人都可以开放、无需许可地使用它。",
+      "date": "2021-06-21T10:00:00+00:00",
+      "category": "blog"
+    },
+    {
+      "title": "Short Story on AI: Forward Pass",
+      "link": "http://karpathy.github.io/2021/03/27/forward-pass/",
+      "summary": "这篇短篇小说的灵感来源于 Kevin Lacker 的《给 GPT-3 做图灵测试》。在序列中大约第 400 个 token 的第 32 层左右，某些东西开始变得……不同。",
+      "date": "2021-03-27T10:00:00+00:00",
+      "category": "blog"
+    },
+    {
+      "title": "Biohacking Lite",
+      "link": "http://karpathy.github.io/2020/06/11/biohacking-lite/",
+      "summary": "我这辈子从来没有太关注过健康、锻炼、饮食或营养。我知道应该锻炼和吃蔬菜之类的，但也仅停留在那个层面。我知道年轻时可以靠着无知混过去，但这种情况不会永远持续。",
+      "date": "2020-06-11T10:00:00+00:00",
+      "category": "blog"
+    },
+    {
+      "title": "A Recipe for Training Neural Networks",
+      "link": "http://karpathy.github.io/2019/04/25/recipe/",
+      "summary": "几周前我发了一条推文，讲的是「最常见的神经网络错误」，列举了训练神经网络时的几个常见陷阱。这条推文引起的关注远超预期（甚至有人开了网络研讨会）。显然，很多人都亲身体验过理论和实践之间的巨大差距。",
+      "date": "2019-04-25T09:00:00+00:00",
+      "category": "blog"
+    },
+    {
+      "title": "(started posting on Medium instead)",
+      "link": "http://karpathy.github.io/2018/01/20/medium/",
+      "summary": "这个博客的当前状态（上一篇文章是两年前）让人觉得我消失了。自从加入特斯拉以来，我写博客确实变少了，但每当我有机会发文章，我最近都默认发在 Medium 上，因为速度更快。",
+      "date": "2018-01-20T11:00:00+00:00",
+      "category": "blog"
+    },
+    {
+      "title": "A Survival Guide to a PhD",
+      "link": "http://karpathy.github.io/2016/09/07/phd/",
+      "summary": "这篇指南是按照我很久以前写的「如何在课程中取得好成绩」的模式来的。那篇指南收到了一些不错的反馈，所以本着同样的精神，现在我的博士生涯结束了，我想整理一份类似的回顾性指南。",
+      "date": "2016-09-07T11:00:00+00:00",
+      "category": "blog"
+    },
+    {
+      "title": "Deep Reinforcement Learning: Pong from Pixels",
+      "link": "http://karpathy.github.io/2016/05/31/rl/",
+      "summary": "这是一篇拖延已久的关于强化学习（RL）的博客文章。RL 现在很火！你可能已经注意到，计算机现在可以从原始游戏像素自动学习玩雅达利游戏，它们正在围棋上击败世界冠军，模拟四足机器人正在学习奔跑和跳跃……",
+      "date": "2016-05-31T11:00:00+00:00",
+      "category": "blog"
+    },
+    {
+      "title": "Short Story on AI: A Cognitive Discontinuity.",
+      "link": "http://karpathy.github.io/2015/11/14/ai/",
+      "summary": "写一系列短篇小说的想法已经在我脑海中萦绕了一段时间。这是我第一次半认真地尝试写故事，而用一个关于 AI 的故事来开篇再合适不过了——如果我们把当前技术外推，会是什么样子。",
+      "date": "2015-11-14T11:00:00+00:00",
+      "category": "blog"
+    }
+  ],
+  "karpathy_x": [
+    {
+      "title": "This works really well btw, at the end of your query ask your LLM to \"structure your response as HTML\", then view the generated file in your browser. I've also had some success asking the LLM to prese",
+      "link": "https://nitter.net/karpathy/status/2053872850101285137#m",
+      "summary": "这个方法确实很好用——在查询末尾让 LLM「将回复结构化为 HTML」，然后在浏览器中查看生成的文件。我还成功让 LLM 把输出展示为幻灯片等形式。更广泛地说，我认为音频是人类偏好的交互方式。",
+      "date": "2026-05-11T16:20:21",
+      "category": "twitter"
+    },
+    {
+      "title": "This is the the quote I've been citing a lot recently.",
+      "link": "https://nitter.net/karpathy/status/2049907410303865030#m",
+      "summary": "这是我最近经常引用的一句话。kache（@yacineMTB）：你可以外包你的思考，但你无法外包你的理解。",
+      "date": "2026-04-30T17:43:06",
+      "category": "twitter"
+    },
+    {
+      "title": "Fireside chat at Sequoia Ascent 2026 from a ~week ago. Some highlights: The first theme I tried to push on is that LLMs are about a lot more than just speeding up what existed before (e.g. coding). Th",
+      "link": "https://nitter.net/karpathy/status/2049903821095354523#m",
+      "summary": "约一周前在 Sequoia Ascent 2026 的炉边谈话。一些亮点：我试图推动的第一个主题是，LLM 的意义远不止加速已有的事物（比如编码）。三个新视野的例子：1. menugen——一个可以完全被 LLM 吞噬的应用……",
+      "date": "2026-04-30T17:28:50",
+      "category": "twitter"
+    },
+    {
+      "title": "RT by @karpathy: New work with @AlecRad and @DavidDuvenaud: Have you ever dreamed of talking to someone from the past? Introducing talkie, a 13B model trained only on pre-1931 text. Vintage models sho",
+      "link": "https://nitter.net/status_effects/status/2048878495539843211#m",
+      "summary": "与 @AlecRad 和 @DavidDuvenaud 合作的新工作：你是否曾梦想过和过去的人对话？介绍 talkie，一个仅在 1931 年前文本上训练的 13B 模型。复古模型应该能帮助我们理解语言模型如何泛化。",
+      "date": "2026-04-27T21:34:34",
+      "category": "twitter"
+    },
+    {
+      "title": "RT by @karpathy: Imagine every pixel on your screen, streamed live directly from a model. No HTML, no layout engine, no code. Just exactly what you want to see. @eddiejiao_obj, @drewocarr and I built ",
+      "link": "https://nitter.net/zan2434/status/2046982383430496444#m",
+      "summary": "想象屏幕上每一个像素都直接从模型中实时流式传输。没有 HTML，没有布局引擎，没有代码。只有你想要的画面。@eddiejiao_obj、@drewocarr 和我做了一个原型，看看这到底能不能实现。",
+      "date": "2026-04-22T16:00:05",
+      "category": "twitter"
+    },
+    {
+      "title": "R to @karpathy: Someone recently suggested to me that the reason OpenClaw moment was so big is because it's the first time a large group of non-technical people (who otherwise only knew AI as synonymo",
+      "link": "https://nitter.net/karpathy/status/2042341482531864741#m",
+      "summary": "最近有人向我提出，OpenClaw 事件之所以引起巨大轰动，是因为这是第一次大量非技术人员——他们之前只知道 AI 等同于 ChatGPT 这个网站——体验到了最新的 Agent 模型。",
+      "date": "2026-04-09T20:38:48",
+      "category": "twitter"
+    },
+    {
+      "title": "Judging by my tl there is a growing gap in understanding of AI capability. The first issue I think is around recency and tier of use. I think a lot of people tried the free tier of ChatGPT somewhere l",
+      "link": "https://nitter.net/karpathy/status/2042334451611693415#m",
+      "summary": "从我的时间线来看，人们对 AI 能力的理解差距越来越大。第一个问题与信息的新近度和使用层次有关。很多人去年某时用过 ChatGPT 的免费版，然后就让那次体验过度地塑造了对 AI 的看法。",
+      "date": "2026-04-09T20:10:52",
+      "category": "twitter"
+    },
+    {
+      "title": "R to @karpathy: Surprised with how good the comments on github gists are. A lot more helpful, insightful, constructive, a lot less AI... Is it the user community? The markdown format? The (lack of) in",
+      "link": "https://nitter.net/karpathy/status/2040806346556428585#m",
+      "summary": "GitHub Gist 的评论区质量让我惊讶——信息量大、有洞察、建设性强，AI 内容少得多。是用户社区的原因？Markdown 格式？还是激励机制的缺失？突然觉得我应该多发 Gist。",
+      "date": "2026-04-05T14:58:44",
+      "category": "twitter"
+    },
+    {
+      "title": "Farzapedia, personal wikipedia of Farza, good example following my Wiki LLM tweet. I really like this approach to personalization in a number of ways, compared to \"status quo\" of an AI that allegedly ",
+      "link": "https://nitter.net/karpathy/status/2040572272944324650#m",
+      "summary": "Farzapedia——Farza 的个人维基百科，是我之前那条 Wiki LLM 推文的好例子。我非常喜欢这种个性化的方式，相较于让 AI 根据使用习惯「自动变好」的现状：1. 显式化——记忆产物对用户可见……",
+      "date": "2026-04-04T23:28:36",
+      "category": "twitter"
+    },
+    {
+      "title": "Something I've been thinking about - I am bullish on people (empowered by AI) increasing the visibility, legibility and accountability of their governments. Historically, it is the governments that ac",
+      "link": "https://nitter.net/karpathy/status/2040549459193704852#m",
+      "summary": "我最近在思考的一件事——我对人们（借助 AI 赋能）提升政府透明度、可读性和问责制持乐观态度。历史上，一直是政府在推动社会的「可读化」（比如《国家的视角》就是常见参考）。",
+      "date": "2026-04-04T21:57:57",
+      "category": "twitter"
+    },
+    {
+      "title": "Wow, this tweet went very viral! I wanted share a possibly slightly improved version of the tweet in an \"idea file\". The idea of the idea file is that in this era of LLM agents, there is less of a poi",
+      "link": "https://nitter.net/karpathy/status/2040470801506541998#m",
+      "summary": "哇，这条推文爆了！我想在「想法文件」中分享一个可能略微改进过的版本。想法文件的意思是，在 LLM Agent 时代，分享具体代码/应用的意义变小了，你只需要分享想法，然后……",
+      "date": "2026-04-04T16:45:23",
+      "category": "twitter"
+    },
+    {
+      "title": "LLM Knowledge Bases Something I'm finding very useful recently: using LLMs to build personal knowledge bases for various topics of research interest. In this way, a large fraction of my recent token t",
+      "link": "https://nitter.net/karpathy/status/2039805659525644595#m",
+      "summary": "LLM 知识库——我最近发现非常有用的一件事：用 LLM 为各种研究兴趣主题构建个人知识库。这样，我最近大量的 token 吞吐量更多地用于操作知识而非代码。",
+      "date": "2026-04-02T20:42:21",
+      "category": "twitter"
+    },
+    {
+      "title": "New supply chain attack this time for npm axios, the most popular HTTP client library with 300M weekly downloads. Scanning my system I found a use imported from googleworkspace/cli from a few days ago",
+      "link": "https://nitter.net/karpathy/status/2038849654423798197#m",
+      "summary": "新的供应链攻击，这次针对 npm axios——最流行的 HTTP 客户端库，每周 3 亿次下载。扫描我的系统后发现，我几天前在实验 Gmail/Gcal CLI 时用过的一个来自 googleworkspace/cli 的导入。",
+      "date": "2026-03-31T05:23:32",
+      "category": "twitter"
+    },
+    {
+      "title": "- Drafted a blog post - Used an LLM to meticulously improve the argument over 4 hours. - Wow, feeling great, it’s so convincing! - Fun idea let’s ask it to argue the opposite. - LLM demolishes the ent",
+      "link": "https://nitter.net/karpathy/status/2037921699824607591#m",
+      "summary": "- 起草了一篇博文。- 用 LLM 花 4 小时精心打磨论点。- 哇，感觉太棒了，非常有说服力！- 突发奇想让它反驳自己。- LLM 彻底摧毁了整篇论点，让我相信反面才是对的。- 哈哈。LLM 是终极的「魔鬼代言人」。",
+      "date": "2026-03-28T15:56:10",
+      "category": "twitter"
+    },
+    {
+      "title": "When I built menugen ~1 year ago, I observed that the hardest part by far was not the code itself, it was the plethora of services you have to assemble like IKEA furniture to make it real, the DevOps:",
+      "link": "https://nitter.net/karpathy/status/2037200624450936940#m",
+      "summary": "大约一年前我构建 menugen 时，我观察到最困难的部分远不是代码本身，而是你必须像组装宜家家具一样拼凑起来的各种服务——也就是 DevOps：服务、支付、认证、数据库、安全、域名等。",
+      "date": "2026-03-26T16:10:52",
+      "category": "twitter"
+    },
+    {
+      "title": "R to @karpathy: (I cycle through all LLMs over time and all of them seem to do this so it's not any particular implementation but something deeper, e.g. maybe during training, a lot of the information",
+      "link": "https://nitter.net/karpathy/status/2036841069636370467#m",
+      "summary": "（我定期轮换使用各种 LLM，它们似乎都有这个问题，所以这不是某个特定实现的问题，而是更深层的——也许在训练过程中，上下文窗口中的大量信息都与任务相关，所以 LLM 形成了使用所给信息的偏见。）",
+      "date": "2026-03-25T16:22:08",
+      "category": "twitter"
+    },
+    {
+      "title": "One common issue with personalization in all LLMs is how distracting memory seems to be for the models. A single question from 2 months ago about some topic can keep coming up as some kind of a deep i",
+      "link": "https://nitter.net/karpathy/status/2036836816654147718#m",
+      "summary": "所有 LLM 中个性化的一个常见问题是，记忆对模型来说似乎非常分散注意力。两个月前的某个问题可能不断被提起，仿佛是我的某种深度兴趣，持续受到过度关注。某种太过努力的表现。",
+      "date": "2026-03-25T16:05:14",
+      "category": "twitter"
+    },
+    {
+      "title": "Software horror: litellm PyPI supply chain attack. Simple `pip install litellm` was enough to exfiltrate SSH keys, AWS/GCP/Azure creds, Kubernetes configs, git credentials, env vars (all your API keys",
+      "link": "https://nitter.net/karpathy/status/2036487306585268612#m",
+      "summary": "软件恐怖事件：litellm PyPI 供应链攻击。仅仅执行 `pip install litellm` 就足以泄露 SSH 密钥、AWS/GCP/Azure 凭证、Kubernetes 配置、Git 凭据、环境变量（所有 API 密钥）、Shell 历史记录、加密钱包、SSL 私钥、CI/CD 秘密、数据库密码……",
+      "date": "2026-03-24T16:56:24",
+      "category": "twitter"
+    },
+    {
+      "title": "Thank you Sarah, my pleasure to come on the pod! And happy to do some more Q&A in the replies.",
+      "link": "https://nitter.net/karpathy/status/2035158351357911527#m",
+      "summary": "谢谢你 Sarah，很高兴能上你的播客！也乐意在评论区做更多问答。sarah guo 在 @NoPriorsPod 上与我聊了：工程范式的阶段性转变、AI 精神病、Claws、AutoResearch、类似 SETI-at-Home 的机会……",
+      "date": "2026-03-21T00:55:37",
+      "category": "twitter"
+    },
+    {
+      "title": "R to @karpathy: Andy Weir showing some of the spreadsheets underlying the calculations in the book https://www.youtube.com/watch?v=lYHCTEnYOr4 i mean, it's not quality scifi if it doesn't come with a ",
+      "link": "https://nitter.net/karpathy/status/2034873049753997619#m",
+      "summary": "Andy Weir 展示了支撑《火星救援》中计算的那些电子表格。我的意思是，没有附带白皮书的科幻小说，算不上高质量的科幻。",
+      "date": "2026-03-20T06:01:55",
+      "category": "twitter"
+    }
+  ],
+  "_fetched_at": "2026-05-18T08:28:36.471507+00:00"
+}
