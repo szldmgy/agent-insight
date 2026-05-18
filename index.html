@@ -570,8 +570,32 @@ function switchKarpathyTab(tab) {
 }
 
 // ── Refresh ─────────────────────────────────────────────────
-function manualRefresh() {
-  location.reload();
+async function manualRefresh() {
+  const btn = document.getElementById('btnRefresh');
+  const spinner = document.getElementById('spinner');
+  btn.disabled = true;
+  spinner.style.display = 'inline-block';
+  showToast('Refreshing...');
+
+  try {
+    const resp = await fetch('/api/refresh');
+    const result = await resp.json();
+    if (result.ok) {
+      // Reload data from API
+      const dataResp = await fetch('/api/data');
+      allData = await dataResp.json();
+      renderAll();
+      updateLastFetchTime();
+      showToast('Data refreshed ✓');
+    } else {
+      showToast('Refresh failed: ' + result.message);
+    }
+  } catch (err) {
+    showToast('Cannot refresh — run server.py for live refresh');
+  } finally {
+    btn.disabled = false;
+    spinner.style.display = 'none';
+  }
 }
 
 // ── Schedule ────────────────────────────────────────────────
