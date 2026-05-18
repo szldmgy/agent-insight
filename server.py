@@ -43,10 +43,26 @@ class Handler(SimpleHTTPRequestHandler):
             self._send_json({"ok": False, "message": str(e)}, 500)
 
     def _handle_data(self):
-        """Serve the latest insights.json."""
+        """Serve insights.json with translations applied."""
         try:
             with open(os.path.join(DIR, "data", "insights.json")) as f:
                 data = json.load(f)
+            with open(os.path.join(DIR, "data", "translations.json")) as f:
+                tr = json.load(f)
+
+            for key in ["openai", "anthropic", "karpathy_blog", "karpathy_x"]:
+                for item in data.get(key, []):
+                    link = item.get("link", "")
+                    title = item.get("title", "")
+                    cn = tr.get(link)
+                    if not cn and title:
+                        for tkey, tcn in tr.items():
+                            if tkey.startswith("_title:") and title.startswith(tkey[7:][:50]):
+                                cn = tcn
+                                break
+                    if cn:
+                        item["summary"] = cn
+
             self._send_json(data)
         except Exception as e:
             self._send_json({"error": str(e)}, 500)
