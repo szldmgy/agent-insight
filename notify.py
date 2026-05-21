@@ -39,8 +39,7 @@ def send_notification(config, subject, body_html):
     msg["Subject"] = subject
     msg.attach(MIMEText(body_html, "html", "utf-8"))
 
-    with smtplib.SMTP(config["host"], config["port"], timeout=30) as server:
-        server.starttls()
+    with smtplib.SMTP_SSL(config["host"], config["port"], timeout=60) as server:
         server.login(config["user"], config["password"])
         server.sendmail(config["user"], [config["to"]], msg.as_string())
 
