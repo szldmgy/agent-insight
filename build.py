@@ -2,10 +2,12 @@
 """
 Build self-contained index.html with embedded insight data.
 Merges Chinese translations from data/translations.json (keyed by title).
+Uses regex to replace the embedded allData JSON payload.
 """
 
 import json
 import os
+import re
 
 DIR = os.path.dirname(os.path.abspath(__file__))
 TEMPLATE = os.path.join(DIR, "index.html")
@@ -40,9 +42,10 @@ for key in ["openai", "anthropic", "karpathy_blog", "karpathy_x"]:
 with open(DATA_FILE, "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
-# Embed data into HTML
+# Embed data into HTML via regex: replace `let allData = {...};`
 data_json = json.dumps(data, ensure_ascii=False)
-html = html.replace("__INSIGHT_DATA__", data_json)
+new_decl = f"let allData = {data_json};"
+html = re.sub(r"let allData\s*=\s*\{.*?\};", new_decl, html, flags=re.DOTALL)
 
 with open(TEMPLATE, "w", encoding="utf-8") as f:
     f.write(html)

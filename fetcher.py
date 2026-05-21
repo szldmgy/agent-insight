@@ -277,10 +277,16 @@ def merge_incremental(source_key, new_items, cache):
     # Filter out items already in cache
     truly_new = [item for item in new_items if item.get("link") not in cached_links]
 
+    # Mark new items for frontend highlighting
+    for item in truly_new:
+        item["_new"] = True
+
     if truly_new:
         print(f"    → {len(truly_new)} new, {len(cached_items)} cached")
 
-    # Merge: new first, then cached
+    # Merge: new first, then cached (strip _new from cached items)
+    for item in cached_items:
+        item.pop("_new", None)
     merged = truly_new + cached_items
 
     # Cap

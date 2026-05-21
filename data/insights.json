@@ -5,7 +5,8 @@
       "link": "https://openai.com/index/building-codex-windows-sandbox",
       "summary": "了解 OpenAI 如何为 Windows 版 Codex 构建安全沙箱，通过受控的文件访问和网络限制实现安全高效的编码 Agent。",
       "date": "2026-05-13T11:00:00",
-      "category": "Engineering"
+      "category": "Engineering",
+      "_new": true
     },
     {
       "title": "Unlocking large scale AI training networks with MRC (Multipath Reliable Connection)",
