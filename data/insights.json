@@ -239,34 +239,6 @@
       "summary": "在 Agent 编码工作流中使用 Claude Code 的最佳实践。",
       "date": "",
       "category": "engineering"
-    },
-    {
-      "title": "The \"think\" tool: Enabling Claude to stop and think in complex tool use situations",
-      "link": "https://www.anthropic.com/engineering/claude-think-tool",
-      "summary": "推出 think 工具，让 Claude 在复杂工具使用场景中暂停并推理。",
-      "date": "",
-      "category": "engineering"
-    },
-    {
-      "title": "Raising the bar on SWE-bench Verified with Claude 3.5 Sonnet",
-      "link": "https://www.anthropic.com/engineering/swe-bench-sonnet",
-      "summary": "Claude 3.5 Sonnet 如何在 SWE-bench Verified 上取得最先进的结果。",
-      "date": "",
-      "category": "engineering"
-    },
-    {
-      "title": "Building effective agents",
-      "link": "https://www.anthropic.com/engineering/building-effective-agents",
-      "summary": "构建高效 AI Agent 的综合指南。",
-      "date": "",
-      "category": "engineering"
-    },
-    {
-      "title": "Introducing Contextual Retrieval",
-      "link": "https://www.anthropic.com/engineering/contextual-retrieval",
-      "summary": "推出 Contextual Retrieval，提升 RAG 性能。",
-      "date": "",
-      "category": "engineering"
     }
   ],
   "karpathy_blog": [
@@ -343,6 +315,13 @@
   ],
   "karpathy_x": [
     {
+      "title": "Personal update: I've joined Anthropic. I think the next few years at the frontier of LLMs will be especially formative. I am very excited to join the team here and get back to R&D. I remain deeply pa",
+      "link": "https://nitter.net/karpathy/status/2056753169888334312#m",
+      "summary": "Personal update: I've joined Anthropic. I think the next few years at the frontier of LLMs will be especially formative. I am very excited to join the team here and get back to R&D. I remain deeply passionate about education and plan to resume my work on it in time.",
+      "date": "2026-05-19T15:05:42",
+      "category": "twitter"
+    },
+    {
       "title": "This works really well btw, at the end of your query ask your LLM to \"structure your response as HTML\", then view the generated file in your browser. I've also had some success asking the LLM to prese",
       "link": "https://nitter.net/karpathy/status/2053872850101285137#m",
       "summary": "这个方法确实很好用——在查询末尾让 LLM「将回复结构化为 HTML」，然后在浏览器中查看生成的文件。我还成功让 LLM 把输出展示为幻灯片等形式。更广泛地说，我认为音频是人类偏好的交互方式。",
@@ -404,84 +383,7 @@
       "summary": "Farzapedia——Farza 的个人维基百科，是我之前那条 Wiki LLM 推文的好例子。我非常喜欢这种个性化的方式，相较于让 AI 根据使用习惯「自动变好」的现状：1. 显式化——记忆产物对用户可见……",
       "date": "2026-04-04T23:28:36",
       "category": "twitter"
-    },
-    {
-      "title": "Something I've been thinking about - I am bullish on people (empowered by AI) increasing the visibility, legibility and accountability of their governments. Historically, it is the governments that ac",
-      "link": "https://nitter.net/karpathy/status/2040549459193704852#m",
-      "summary": "我最近在思考的一件事——我对人们（借助 AI 赋能）提升政府透明度、可读性和问责制持乐观态度。历史上，一直是政府在推动社会的「可读化」（比如《国家的视角》就是常见参考）。",
-      "date": "2026-04-04T21:57:57",
-      "category": "twitter"
-    },
-    {
-      "title": "Wow, this tweet went very viral! I wanted share a possibly slightly improved version of the tweet in an \"idea file\". The idea of the idea file is that in this era of LLM agents, there is less of a poi",
-      "link": "https://nitter.net/karpathy/status/2040470801506541998#m",
-      "summary": "哇，这条推文爆了！我想在「想法文件」中分享一个可能略微改进过的版本。想法文件的意思是，在 LLM Agent 时代，分享具体代码/应用的意义变小了，你只需要分享想法，然后……",
-      "date": "2026-04-04T16:45:23",
-      "category": "twitter"
-    },
-    {
-      "title": "LLM Knowledge Bases Something I'm finding very useful recently: using LLMs to build personal knowledge bases for various topics of research interest. In this way, a large fraction of my recent token t",
-      "link": "https://nitter.net/karpathy/status/2039805659525644595#m",
-      "summary": "LLM 知识库——我最近发现非常有用的一件事：用 LLM 为各种研究兴趣主题构建个人知识库。这样，我最近大量的 token 吞吐量更多地用于操作知识而非代码。",
-      "date": "2026-04-02T20:42:21",
-      "category": "twitter"
-    },
-    {
-      "title": "New supply chain attack this time for npm axios, the most popular HTTP client library with 300M weekly downloads. Scanning my system I found a use imported from googleworkspace/cli from a few days ago",
-      "link": "https://nitter.net/karpathy/status/2038849654423798197#m",
-      "summary": "新的供应链攻击，这次针对 npm axios——最流行的 HTTP 客户端库，每周 3 亿次下载。扫描我的系统后发现，我几天前在实验 Gmail/Gcal CLI 时用过的一个来自 googleworkspace/cli 的导入。",
-      "date": "2026-03-31T05:23:32",
-      "category": "twitter"
-    },
-    {
-      "title": "- Drafted a blog post - Used an LLM to meticulously improve the argument over 4 hours. - Wow, feeling great, it’s so convincing! - Fun idea let’s ask it to argue the opposite. - LLM demolishes the ent",
-      "link": "https://nitter.net/karpathy/status/2037921699824607591#m",
-      "summary": "- 起草了一篇博文。- 用 LLM 花 4 小时精心打磨论点。- 哇，感觉太棒了，非常有说服力！- 突发奇想让它反驳自己。- LLM 彻底摧毁了整篇论点，让我相信反面才是对的。- 哈哈。LLM 是终极的「魔鬼代言人」。",
-      "date": "2026-03-28T15:56:10",
-      "category": "twitter"
-    },
-    {
-      "title": "When I built menugen ~1 year ago, I observed that the hardest part by far was not the code itself, it was the plethora of services you have to assemble like IKEA furniture to make it real, the DevOps:",
-      "link": "https://nitter.net/karpathy/status/2037200624450936940#m",
-      "summary": "大约一年前我构建 menugen 时，我观察到最困难的部分远不是代码本身，而是你必须像组装宜家家具一样拼凑起来的各种服务——也就是 DevOps：服务、支付、认证、数据库、安全、域名等。",
-      "date": "2026-03-26T16:10:52",
-      "category": "twitter"
-    },
-    {
-      "title": "R to @karpathy: (I cycle through all LLMs over time and all of them seem to do this so it's not any particular implementation but something deeper, e.g. maybe during training, a lot of the information",
-      "link": "https://nitter.net/karpathy/status/2036841069636370467#m",
-      "summary": "（我定期轮换使用各种 LLM，它们似乎都有这个问题，所以这不是某个特定实现的问题，而是更深层的——也许在训练过程中，上下文窗口中的大量信息都与任务相关，所以 LLM 形成了使用所给信息的偏见。）",
-      "date": "2026-03-25T16:22:08",
-      "category": "twitter"
-    },
-    {
-      "title": "One common issue with personalization in all LLMs is how distracting memory seems to be for the models. A single question from 2 months ago about some topic can keep coming up as some kind of a deep i",
-      "link": "https://nitter.net/karpathy/status/2036836816654147718#m",
-      "summary": "所有 LLM 中个性化的一个常见问题是，记忆对模型来说似乎非常分散注意力。两个月前的某个问题可能不断被提起，仿佛是我的某种深度兴趣，持续受到过度关注。某种太过努力的表现。",
-      "date": "2026-03-25T16:05:14",
-      "category": "twitter"
-    },
-    {
-      "title": "Software horror: litellm PyPI supply chain attack. Simple `pip install litellm` was enough to exfiltrate SSH keys, AWS/GCP/Azure creds, Kubernetes configs, git credentials, env vars (all your API keys",
-      "link": "https://nitter.net/karpathy/status/2036487306585268612#m",
-      "summary": "软件恐怖事件：litellm PyPI 供应链攻击。仅仅执行 `pip install litellm` 就足以泄露 SSH 密钥、AWS/GCP/Azure 凭证、Kubernetes 配置、Git 凭据、环境变量（所有 API 密钥）、Shell 历史记录、加密钱包、SSL 私钥、CI/CD 秘密、数据库密码……",
-      "date": "2026-03-24T16:56:24",
-      "category": "twitter"
-    },
-    {
-      "title": "Thank you Sarah, my pleasure to come on the pod! And happy to do some more Q&A in the replies.",
-      "link": "https://nitter.net/karpathy/status/2035158351357911527#m",
-      "summary": "谢谢你 Sarah，很高兴能上你的播客！也乐意在评论区做更多问答。sarah guo 在 @NoPriorsPod 上与我聊了：工程范式的阶段性转变、AI 精神病、Claws、AutoResearch、类似 SETI-at-Home 的机会……",
-      "date": "2026-03-21T00:55:37",
-      "category": "twitter"
-    },
-    {
-      "title": "R to @karpathy: Andy Weir showing some of the spreadsheets underlying the calculations in the book https://www.youtube.com/watch?v=lYHCTEnYOr4 i mean, it's not quality scifi if it doesn't come with a ",
-      "link": "https://nitter.net/karpathy/status/2034873049753997619#m",
-      "summary": "Andy Weir 展示了支撑《火星救援》中计算的那些电子表格。我的意思是，没有附带白皮书的科幻小说，算不上高质量的科幻。",
-      "date": "2026-03-20T06:01:55",
-      "category": "twitter"
     }
   ],
-  "_fetched_at": "2026-05-18T09:38:16.337337+00:00"
+  "_fetched_at": "2026-05-21T11:19:33.371576+00:00"
 }

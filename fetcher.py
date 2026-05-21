@@ -237,55 +237,119 @@ def clean_html(text):
 
 
 # ─────────────────────────────────────────────────────────────
+# Incremental merge helpers
+# ─────────────────────────────────────────────────────────────
+
+# Max items to keep per source
+MAX_ITEMS = {
+    "openai": 20,
+    "anthropic": 20,
+    "karpathy_blog": 15,
+    "karpathy_x": 10,
+}
+
+
+def load_cache():
+    """Load existing insights.json as cache, return {source: [items]}."""
+    cache_path = os.path.join(OUTPUT_DIR, "insights.json")
+    if os.path.exists(cache_path):
+        try:
+            with open(cache_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            if isinstance(data, dict):
+                return data
+        except Exception:
+            pass
+    return {}
+
+
+def merge_incremental(source_key, new_items, cache):
+    """
+    Merge new items into cached items for a source.
+    - Items are identified uniquely by 'link'.
+    - New items are prepended; existing cached items preserved.
+    - Caps total count at MAX_ITEMS[source_key].
+    Returns merged list.
+    """
+    cached_items = cache.get(source_key, [])
+    cached_links = {item.get("link") for item in cached_items}
+
+    # Filter out items already in cache
+    truly_new = [item for item in new_items if item.get("link") not in cached_links]
+
+    if truly_new:
+        print(f"    → {len(truly_new)} new, {len(cached_items)} cached")
+
+    # Merge: new first, then cached
+    merged = truly_new + cached_items
+
+    # Cap
+    cap = MAX_ITEMS.get(source_key, 20)
+    if len(merged) > cap:
+        merged = merged[:cap]
+
+    return merged
+
+
+# ─────────────────────────────────────────────────────────────
 # Main
 # ─────────────────────────────────────────────────────────────
 
 def main():
-    print(f"[{datetime.now().isoformat()}] Fetching insights...")
+    print(f"[{datetime.now().isoformat()}] Fetching insights (incremental)...")
 
-    all_data = {}
+    # Load existing cache
+    cache = load_cache()
+    cache.pop("_fetched_at", None)  # remove meta key for merging
+
+    new_data = {}
 
     # OpenAI (Engineering only)
     try:
-        all_data["openai"] = fetch_openai()
-        print(f"  OpenAI Engineering: {len(all_data['openai'])} items")
+        fresh_openai = fetch_openai()
+        print(f"  OpenAI Engineering: {len(fresh_openai)} fetched")
+        new_data["openai"] = merge_incremental("openai", fresh_openai, cache)
     except Exception as e:
-        print(f"  OpenAI ERROR: {e}")
-        all_data["openai"] = []
+        print(f"  OpenAI ERROR: {e}, keeping cached")
+        new_data["openai"] = cache.get("openai", [])
 
     # Anthropic (Engineering)
     try:
-        all_data["anthropic"] = fetch_anthropic()
-        print(f"  Anthropic Engineering: {len(all_data['anthropic'])} items")
+        fresh_anthropic = fetch_anthropic()
+        print(f"  Anthropic Engineering: {len(fresh_anthropic)} fetched")
+        new_data["anthropic"] = merge_incremental("anthropic", fresh_anthropic, cache)
     except Exception as e:
-        print(f"  Anthropic ERROR: {e}")
-        all_data["anthropic"] = []
+        print(f"  Anthropic ERROR: {e}, keeping cached")
+        new_data["anthropic"] = cache.get("anthropic", [])
 
     # Karpathy Blog
     try:
-        all_data["karpathy_blog"] = fetch_karpathy_blog()
-        print(f"  Karpathy Blog: {len(all_data['karpathy_blog'])} items")
+        fresh_blog = fetch_karpathy_blog()
+        print(f"  Karpathy Blog: {len(fresh_blog)} fetched")
+        new_data["karpathy_blog"] = merge_incremental("karpathy_blog", fresh_blog, cache)
     except Exception as e:
-        print(f"  Karpathy Blog ERROR: {e}")
-        all_data["karpathy_blog"] = []
+        print(f"  Karpathy Blog ERROR: {e}, keeping cached")
+        new_data["karpathy_blog"] = cache.get("karpathy_blog", [])
 
     # Karpathy X
     try:
-        all_data["karpathy_x"] = fetch_karpathy_x()
-        print(f"  Karpathy X: {len(all_data['karpathy_x'])} items")
+        fresh_x = fetch_karpathy_x()
+        print(f"  Karpathy X: {len(fresh_x)} fetched")
+        new_data["karpathy_x"] = merge_incremental("karpathy_x", fresh_x, cache)
     except Exception as e:
-        print(f"  Karpathy X ERROR: {e}")
-        all_data["karpathy_x"] = []
+        print(f"  Karpathy X ERROR: {e}, keeping cached")
+        new_data["karpathy_x"] = cache.get("karpathy_x", [])
 
     # Add timestamp
-    all_data["_fetched_at"] = datetime.now(timezone.utc).isoformat()
+    new_data["_fetched_at"] = datetime.now(timezone.utc).isoformat()
 
     # Write JSON
     out_path = os.path.join(OUTPUT_DIR, "insights.json")
     with open(out_path, "w", encoding="utf-8") as f:
-        json.dump(all_data, f, ensure_ascii=False, indent=2)
+        json.dump(new_data, f, ensure_ascii=False, indent=2)
 
-    print(f"  Written to {out_path}")
+    total = sum(len(new_data.get(k, [])) for k in ["openai", "anthropic", "karpathy_blog", "karpathy_x"])
+    print(f"  Written {total} items to {out_path}")
 
 
 if __name__ == "__main__":
