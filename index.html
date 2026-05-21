@@ -200,26 +200,23 @@
   .item.new-item {
     border-left: 3px solid var(--accent);
     background: linear-gradient(135deg, #fdf8f0 0%, var(--bg-card) 40%);
-    position: relative;
   }
-  .item.new-item::before {
-    content: 'NEW';
-    position: absolute;
-    top: 10px;
-    right: 12px;
+  .item.new-item:hover {
+    border-left-color: var(--accent-hover);
+    background: linear-gradient(135deg, #fcf5ea 0%, var(--bg-hover) 40%);
+  }
+
+  .new-badge {
+    display: inline-block;
     font-size: 10px;
     font-weight: 600;
     letter-spacing: 0.5px;
     color: var(--accent);
     background: rgba(212, 165, 116, 0.1);
-    padding: 2px 8px;
+    padding: 1px 7px;
     border-radius: 4px;
     border: 1px solid rgba(212, 165, 116, 0.25);
-    pointer-events: none;
-  }
-  .item.new-item:hover {
-    border-left-color: var(--accent-hover);
-    background: linear-gradient(135deg, #fcf5ea 0%, var(--bg-hover) 40%);
+    vertical-align: middle;
   }
 
   .item-link {
@@ -518,6 +515,7 @@ function renderColumn(key, items) {
         <a class="item-link" href="${link}" target="_blank" rel="noopener">${title}</a>
         <div class="item-meta">
           <span>${date}</span>
+          ${item._new ? '<span class="new-badge">NEW</span>' : ''}
         </div>
         ${summary}
       </div>`;
@@ -556,7 +554,7 @@ function renderKarpathy() {
     return `
       <div class="item ${hidden} ${isNew}">
         <a class="item-link" href="${link}" target="_blank" rel="noopener">${title}</a>
-        <div class="item-meta"><span>${date}</span></div>
+        <div class="item-meta"><span>${date}</span>${item._new ? '<span class="new-badge">NEW</span>' : ''}</div>
         ${summary}
       </div>`;
   }).join('');
