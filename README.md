@@ -2,6 +2,8 @@
 
 AI Engineering Radar — 监控 OpenAI Engineering、Anthropic Engineering、Karpathy 的技术动态。
 
+🌐 **在线访问**：[szldmgy.github.io/agent-insight](https://szldmgy.github.io/agent-insight/)
+
 ## 功能
 
 - 三栏仪表盘：OpenAI Engineering / Anthropic Engineering / Karpathy（Blog + X）
